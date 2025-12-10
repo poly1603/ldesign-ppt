@@ -1,0 +1,38 @@
+{
+  "name": "@ldesign/ppt-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A powerful PPT/PPTX renderer for web applications",
+  "keywords": [
+    "ppt",
+    "pptx",
+    "powerpoint",
+    "presentation",
+    "slides",
+    "viewer",
+    "renderer"
+  ],
+  "author": "ldesign",
+  "license": "MIT",
+  "scripts": {
+    "build": "pnpm -r --filter=!@ldesign/ppt-playground build",
+    "dev": "pnpm -r --parallel --filter=!@ldesign/ppt-playground dev",
+    "playground": "pnpm --filter @ldesign/ppt-playground dev",
+    "test": "pnpm -r test",
+    "lint": "eslint packages --ext .ts,.tsx,.vue",
+    "clean": "pnpm -r clean && rimraf node_modules",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.12.0"
+}
